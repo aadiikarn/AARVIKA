@@ -1,0 +1,120 @@
+.toast {
+  position: fixed;
+  right: 28px;
+  bottom: 28px;
+  z-index: 2000;
+
+  min-width: 320px;
+  max-width: 420px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 16px;
+
+  border: 1px solid #dfe4ec;
+  border-radius: 14px;
+
+  background: #ffffff;
+
+  box-shadow: 0 16px 40px rgba(23, 32, 51, 0.16);
+
+  animation: toast-slide-in 0.25s ease-out;
+}
+
+.toast-icon {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eaf8ef;
+  color: #269653;
+
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.toast-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.toast-content strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #172033;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.toast-content span {
+  display: block;
+
+  color: #737d90;
+
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.toast-close {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 7px;
+
+  background: transparent;
+  color: #8b94a5;
+
+  font-size: 17px;
+}
+
+.toast-close:hover {
+  background: #f3f5f8;
+  color: #172033;
+}
+
+.toast-error .toast-icon {
+  background: #fff0f0;
+  color: #d64545;
+}
+
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .toast {
+    right: 16px;
+    left: 16px;
+    bottom: 78px;
+
+    min-width: 0;
+    max-width: none;
+  }
+}
